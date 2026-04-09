@@ -17,8 +17,8 @@ public class UsuarioController {
     @GetMapping("/perfil")
     public String perfil(Model model) {
         model.addAttribute("nome","João Paulo");
-        model.addAttribute("curso","Desenvolvimento");
-        model.addAttribute("LingyagemFavorita","Matematica");
+        model.addAttribute("curso","Técnico de Desenvolvimento de Sistema");
+        model.addAttribute("linguagemFavorita","Java");
         return "perfil";
     }
 }

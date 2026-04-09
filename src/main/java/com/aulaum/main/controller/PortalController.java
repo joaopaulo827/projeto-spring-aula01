@@ -19,11 +19,11 @@ public class PortalController {
         return "portal";
     }
     @GetMapping("/servicos")
-    public String abrilServico() {
+    public String servico() {
         return "servicos";
     }
     @GetMapping("/contato")
-    public String abrilContato() {
+    public String contato() {
             return "contato";
     }
 }
