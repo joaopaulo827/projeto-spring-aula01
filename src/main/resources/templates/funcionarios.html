@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Funcionários</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="/portal">Volta para o portal</a>
+            </nav>
+            <h1>Lista de Funcionarios na empresa</h1>            
+       </header>
+        <main>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>cargo</th>
+                    <th>departamento</th>
+                    <th>email</th>
+                    <th>dataContratacao</th> 
+                </tr>
+                <tr th:each="item : ${lista}">
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.nome}"></td>
+                    <td th:text="${item.cargo}"></td>
+                    <td th:text="${item.departamento}"></td>
+                    <td th:text="${item.email}"></td>
+                    <td th:text="${item.dataContratacao}"></td>
+                </tr>
+               
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>cargo</th>
+                    <th>email</th>
+                    <th>dataContratacao</th> 
+                </tr>
+                <tr th:each="tec : ${departamento}">
+                    <td th:text="${tec.id}"></td>
+                    <td th:text="${tec.nome}"></td>
+                    <td th:text="${tec.cargo}"></td>
+                    <td th:text="${tec.email}"></td>
+                    <td th:text="${tec.dataContratacao}"></td>
+                </tr>
+            </table> 
+        </main>
+    </body>
+</html>

@@ -77,5 +77,6 @@ public class FuncionarioBean {
     public void setDataContratacao(Date dataContratacao) {
         this.dataContratacao = dataContratacao;
     }
-    
+
+
 }
